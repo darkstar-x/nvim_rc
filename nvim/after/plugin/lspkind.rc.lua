@@ -1,13 +1,11 @@
-require('lspkind').init({
-  -- DEPRECATED (use mode instead): enables text annotations
+local status, lspkind = pcall(require, "lspkind")
+if (not status) then return end
+
+lspkind.init({
+  -- enables text annotations
   --
   -- default: true
-  -- with_text = true,
-
-  -- defines how annotations are shown
-  -- default: symbol
-  -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-  mode = 'symbol_text',
+  mode = 'symbol',
 
   -- default symbol map
   -- can be either 'default' (requires nerd-fonts font) or
@@ -20,7 +18,7 @@ require('lspkind').init({
   --
   -- default: {}
   symbol_map = {
-    Text = "",
+    Text = "",
     Method = "",
     Function = "",
     Constructor = "",
@@ -32,7 +30,7 @@ require('lspkind').init({
     Property = "ﰠ",
     Unit = "塞",
     Value = "",
-    Enum = "",
+    Enum = "",
     Keyword = "",
     Snippet = "",
     Color = "",
@@ -44,6 +42,6 @@ require('lspkind').init({
     Struct = "פּ",
     Event = "",
     Operator = "",
-    TypeParameter = ""
+    TypeParameter = ""
   },
 })
