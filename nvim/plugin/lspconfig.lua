@@ -26,6 +26,7 @@ local on_attach = function(client, bufnr)
   --local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  --cmd: { "rust_analyzer" },
   -- Mappings.
   local opts = { noremap = true, silent = true }
 
@@ -125,6 +126,16 @@ nvim_lsp.clangd.setup {
   cmd = { "clangd" }
 }
 
+nvim_lsp.rust_analyzer.setup {
+  cmd = {
+    "rust-analyzer"
+  },
+  filetypes = { "rust" },
+  settings = {
+    ["rust_analyzer"] = {}
+  }
+}
+
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -160,4 +171,3 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
 })
-
