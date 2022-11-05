@@ -1,7 +1,6 @@
 #### Nvim with suport LSP
  ---
-<img src="images/2022-10-25-140947_1366x768_scrot.png" alt="Main screen theme 4" height="520">
-<img src="images/2022-10-25-141142_1366x768_scrot.png" alt="Main screen theme 4" height="520">
+<img src="images/2022-11-05-201827_1366x768_scrot.png" alt="Main screen theme 4" height="520">
 
 #### My personal status line theme
  ---
